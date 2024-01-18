@@ -146,27 +146,6 @@ class Methods:
         if show:
             plt.show()
 
-
-def check_message(word: str,
-                  message: str
-                  ):
-    """
-    Basic regex function to check if a word is in a string. It will only return True if the word is EXACTLY in the
-    string i.e. the word is standalone.
-
-    :param word:
-         The word you're searching for.
-    :param message:
-         The message you're looking at.
-    :return:
-         Boolean depending on result.
-    """
-    checks = re.search(r"\b("+word+r")(s)?\b", message)
-    if checks is not None:
-        return True
-    else:
-        return False
-
 def lagrange(x: float,
              xx: Union[list, np.ndarray],
              yy: Union[list, np.ndarray]
